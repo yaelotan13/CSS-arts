@@ -1,0 +1,431 @@
+$base-color: #D7E9F7;
+$dark: #502A15;
+$koala-color: #E6E6E6;
+$pig-color: #F6A9A9;
+$bear-color: #fcf7ec;
+$dog-color: #fcf7ec;
+$giraffe-color: #FFC947;
+$dark-brown: #865439;
+$wolf-pink: #E97878;
+$hippo-color: #A7C5EB;
+
+.container {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  position: relative;
+  background-color: $base-color;
+  display: flex;
+  flex-wrap: wrap;
+
+  .element-container {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .animal {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      position: absolute;
+      border: 2px solid $dark;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 50px;
+        top: 50px;
+        left: 48px;
+        background-color: $base-color;
+        border-radius: 50%;
+        border: 2px solid $dark;
+      }
+
+      .round-mouse {
+        position: relative;
+        top: 25px;
+        left: 67px;
+        width: 15px;
+        height: 10px;
+        background-color: $dark;
+        border-radius: 50%;
+        z-index: 10;
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 12px;
+          height: 22px;
+          top: -10px;
+          left: 5px;
+          border-radius: 50%;
+          clip-path: circle(50% at 50% 0);
+          border: 2px solid $dark;
+          transform: rotate(180deg);
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 12px;
+          height: 22px;
+          top: -10px;
+          right: 5px;
+          border-radius: 50%;
+          clip-path: circle(50% at 50% 0);
+          border: 2px solid $dark;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .koala {
+      background-color: $koala-color;
+
+      .koala-ear {
+        background-color: $koala-color;
+        border: 2px solid $dark;
+      }
+    }
+
+    .pig {
+      background-color: $pig-color;
+
+      .pig-ear {
+        background-color: $pig-color;
+      }
+    }
+
+    .dog {
+      background-color: $dog-color;
+
+      .dog-ear {
+        background-color: $dark-brown;
+        border: 2px solid $dark;
+        border-radius: 50%;
+        width: 60px;
+        height: 25px;
+        top: 5px;
+        left: -10px;
+      }
+
+      .dog-ear-right {
+        left: 100px;
+        top: 6px;
+      }
+    }
+  
+    .giraffe {
+      background-color: $giraffe-color;
+      z-index: 1;
+      
+      .giraffe-ear {
+        background-color: $giraffe-color;
+      }
+
+      .giraffe-nose {
+        background-color: #FBEEAC;
+      }
+
+      .giraffe-dot {
+        background-color: #F2A154;
+      }
+    }
+  
+    .bear {
+      background-color: $bear-color;
+
+      .bear-eye {
+        background-color: white;
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 25px;
+          height: 30px;
+          right: -2px;
+          transform: rotate(30deg);
+          border-radius: 50%;
+          background-color: $dark;
+        }
+
+        .eyeball {
+          width: 8px;
+          height: 8px;
+          background-color: white;
+          border-radius: 50%;
+          position: absolute;
+          z-index: 2;
+          top: 7px;
+          right: 2px;
+        }
+      }
+
+      .bear-eye-right {
+        transform: rotate(300deg);
+
+        .eyeball-right {
+          top: 5px;
+          right: 5px;
+        }
+      }
+    }
+
+    .brown-bear {
+      background-color: $dark-brown;
+    }
+
+    .wolf {
+      background-color: $dog-color;
+
+      .wolf-ear {
+        background-color: $wolf-pink;
+      }
+
+      .wolf-nose {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $dark;
+        position: absolute;
+        top: 35px;
+        left: 67px;
+        z-index: 2;
+      }
+
+      .wolf-top {
+        position: absolute;
+        left: 35px;
+        top: 1px;
+        height: 0;
+        width: 0;
+        border: 40px solid transparent;
+        border-top: 45px solid $wolf-pink;
+        border-radius: 35%;
+      }
+    }
+  
+    .hippo {
+      background-color: $hippo-color;
+
+      .hippo-ear {
+        background-color: $hippo-color;
+      }
+
+      .hippo-nose {
+        background-color: #8D93AB;
+      }
+    }
+
+    .cow {
+      background-color: $dog-color;
+
+      .cow-ear {
+        background-color: $dog-color;
+      }
+
+      .cow-ear-right {
+        background-color: #6E6D6D;
+      }
+
+      .cow-nose {
+        background-color: $pig-color;
+      }
+
+      .cow-dot {
+        background-color: #6E6D6D;
+      }
+    }
+
+    .eye {
+      width: 10px;
+      height: 10px;
+      background-color: $dark;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      left: 45px;
+      z-index: 2;
+    }
+
+    .right-eye {
+      left: 95px;
+    }
+
+    .round-nose {
+      position: absolute;
+      top: 15px;
+      height: 28px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: $dark;
+      left: 65px;
+    }
+
+    .ear {
+      position: absolute;
+      width: 40px;
+      height: 20px;
+      background-color: $dark;
+      border-radius: 49% 51% 100% 0% / 87% 99% 1% 13%;
+      transform: rotate(320deg);
+    }
+
+    .ear-right {
+      left: 112px;
+      top: 2px;
+      transform: rotate(42deg);
+    }
+
+    .rounded-nose {
+      position: absolute;
+      top: 20px;
+      left: 61px;
+      width: 28px;
+      height: 15px;
+      background-color: #FA8072;
+      border-radius: 50%;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 4px;
+        background-color: $dark;
+        top: 5px;
+        left: 8px;
+        border-radius: 50%;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 4px;
+        background-color: $dark;
+        top: 5px;
+        left: 15px;
+        border-radius: 50%;
+      }
+    }
+
+    .long-ear {
+      &::before {
+        position: absolute;
+        content: "";
+        width: 12px;
+        height: 30px;
+        background-color: $dark-brown;
+        border-radius: 35%;
+        transform: rotate(120deg);
+        left: 8px;
+        top: -22px;
+        border: 2px solid $dark;
+      }
+    }
+
+    .long-ear-right {
+      &::before {
+        transform: rotate(50deg);
+        left: 15px;
+        top: 25px;
+      }
+    }
+
+    .pointy-ear {
+      background-color: $pig-color;
+      border: 2px solid $dark;
+      border-radius: 40px 20px 20px 40px/30px;
+      transform: rotate(55deg);
+      height: 35px;
+      width: 30px;
+      top: -15px;
+    }
+
+    .pointy-ear-right {
+      transform: rotate(130deg);
+      top: -19px;
+    }
+
+    .mouse-container {
+      width: 40px;
+      height: 22px;
+      background-color: #D7B19D;
+      border-radius: 50%;
+      position: absolute;
+      left: 55px;
+      top: 22px;
+      z-index: 0;
+    }
+
+    .dot {
+      width: 30px;
+      height: 45px;
+      z-index: 10;
+      position: absolute;
+      top: 60px;
+      left: 1px;
+      transform: rotate(180deg);
+      border-radius: 68% 32% 8% 92% / 54% 50% 50% 46%;
+    }
+
+    .bottom {
+      top: 97px;
+      left: 100px;
+      transform: rotate(55deg);
+    }
+
+    .small {
+      top: 110px;
+      left: 40px;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+    }
+    
+    .top {
+      top: -2px;
+      left: 60px;
+      border-radius: 36% 64% 8% 92% / 15% 50% 50% 85%;
+      height: 15px;
+      width: 30px;
+      transform: rotate(160deg);
+    }
+
+    .right {
+      top: 40px;
+      left: 110px;
+      border-radius: 50%;
+      height: 30px;
+    }
+
+    .right-middle {
+      top: 65px;
+      left: 115px;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+    }
+
+    .left-top {
+      top: 35px;
+      left: 25px;
+      border-radius: 50%;
+      height: 25px;
+      width: 25px;
+    }
+
+    .right-top {
+      top: 10px;
+      left: 64px;
+      height: 60px;
+      width: 85px;
+      z-index: 0;
+      clip-path: circle(45% at 30% 0);
+      transform: rotate(60deg);
+    }
+  }
+}
