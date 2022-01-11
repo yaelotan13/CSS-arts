@@ -1,0 +1,39 @@
+.container {
+  background-color: #F2AAAA;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 2px solid black;
+}
+
+.container .head {
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  top: 180px;
+  left: 280px;
+  -webkit-clip-path: circle(40% at 50% 100%);
+          clip-path: circle(40% at 50% 100%);
+  background-color: blanchedalmond;
+}
+
+.container .head::after {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  content: "";
+  top: 50px;
+  left: 10px;
+  -webkit-clip-path: circle(90% at 0% 100%);
+          clip-path: circle(90% at 0% 100%);
+  -webkit-transform: rotate(-120deg);
+          transform: rotate(-120deg);
+  background-color: blanchedalmond;
+}
+/*# sourceMappingURL=women.css.map */
